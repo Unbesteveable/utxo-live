@@ -29,20 +29,31 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 * Download and run `utxo-live.py` on the dump file (20 min)
 
 ## Steps
+1. Make sure Bitcoin Core is running and synchronized.
 
-1. Create a new folder called `utxo-live` in a familiar location on your machine (e.g. in your Documents folder).
+2. Create a new folder called `utxo-live` in a familiar location on your machine (e.g. in your Documents folder).
 
-2. Open a terminal window and display the current directory
+3. Open a terminal window and display the current directory.
 
   * Windows: open a terminal (Start -> Command Prompt) and type: 
   ```sh
-  >> echo %cd%
+  echo %cd%
   ```
   
   * Mac/Linux: open a terminal (Mac: Applications -> Utilities -> Terminal) and type:
   ```sh
-  >> pwd
+  pwd
   ```
-3. Navi
+  
+4. Navigate to the `utxo-live` folder using the change directory `cd` command. For example if you're currently in `Documents` and you've created the folder  `Documents/bitcoin-tools/utxo-live/` then type: 
+
+  ```sh
+  cd bitcoin-tools/utxo-live/
+  ```
+
+5. Leave the terminal window there, and open the Bitcoin Core console window. (Alternatively for bitcoin-cli users, open another terminal window and type the following console commands as `bitcoin-cli` commands.
+
+<img src="https://miro.medium.com/max/1098/1*DEukIfd6csdA6bbl2K5sSg.jpeg" alt="Open Console Pic" >
+
 
 
