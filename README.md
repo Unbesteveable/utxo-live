@@ -24,13 +24,14 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 
 2. Open a terminal window and display the current directory
 
-  * Windows Start -> Command Prompt 
+  * On Windows open a terminal with Start -> Command Prompt and then type 
   ```sh
-  echo %cd%
+  >> echo %cd%
   ```
   
-  * Mac:```sh
-  Applications -> Utilities -> Terminal
+  * On Mac open  Applications -> Utilities -> Terminal and type
+  ```sh
+  >> pwd
   ```
   
   ```sh
