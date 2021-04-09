@@ -70,11 +70,11 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 ```sh
   dumptxoutset <PATH to utxo-live>/<xxxxxx.dat>
   ```
-  where `<PATH to utxo-live>` is copy-pasted from step 5 and `<xxxxxx.dat>` contains the block height for `xxxxxx`. For example if the block height was 654321, the command will look something like:
+  where `<PATH to utxo-live>` is copy-pasted from Step 5, and `<xxxxxx.dat>` is the block height. For example if the block height was 654321, the command will look something like:
 
 ```sh
   dumptxoutset /Users/Steve/Documents/bitcoin-tools/utxo-live/654321.dat
   ```
-  If there's no error message after hitting enter then it's working. The process should take 5-10 minutes. Look in your `utxo-live` and you should the file being created as `xxxxxx.dat.incomplete`
+  Hit enter. If there are no error messages then it's working. It will take 5-10 minutes. Look in your `utxo-live` folder and you should see the file being created as `xxxxxx.dat.incomplete`
 
 
