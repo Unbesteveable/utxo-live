@@ -93,7 +93,15 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
    * Check that the file no longer has `.incomplete` after `xxxxxx.dat` 
    * Check that the Bitcoin Core console displays the results of the dump as something like:
 
-<img src="https://utxo.live/dump_output.png" style="border:2px solid black">
+<img src="https://utxo.live/dump_output.png">
 
-11. 
+11. If the dump file is finished and Step 9 is completed (`utxo-live.py` is downloaded and python dependencies were installed), then run `utxo-live.py` by typing in the terminal:
+
+```sh
+  python3 utxo-live.py
+  ```
+
+12. The program will take 20-30 minutes to complete and it will update you on the progress. If there are multiple xxxxxxx.dat files in the folder, it will ask you which one you'd like to process. The image should open automatically when finished. Otherwise it will be stored in the folder as `utxo_heatmap_xxxxxx.png'.
+
+## Acknowledgements
 
