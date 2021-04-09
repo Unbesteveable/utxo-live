@@ -23,12 +23,12 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 * Python3 (you already have it)
 
 
-## Instruction summary
+## Instruction summary for experienced users
 * Create a folder `utxo-live` in a familiar place on your machine
-* Dump the utxo set `dumptxoutset` to a file `xxxxxx.dat` where xxxxxxx is the block height (5 min) 
+* Dump the utxo set `dumptxoutset` to a file `<path to utxo-live>/xxxxxx.dat` where xxxxxxx is your nodes current block height (5 min) 
 * Download and run `utxo-live.py` on the dump file (20 min)
 
-## Steps
+## Step by step instructions
 1. Make sure Bitcoin Core is running and synchronized.
 
 2. Create a new folder called `utxo-live` in a familiar location on your machine (e.g. in your Documents folder).
