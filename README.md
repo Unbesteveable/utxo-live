@@ -3,7 +3,7 @@
 
 <br>
 
-This project generates a heatmap visualization of the blockchain stored on your local Bitcoin node. 
+This project generates a heatmap visualization of the Bitcoin blockchain stored on your local node. 
 
 <br>
 
@@ -34,20 +34,15 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 
 2. Open a terminal window and display the current directory
 
-  * On Windows open a terminal with Start -> Command Prompt and then type 
+  * Windows: open a terminal (Start -> Command Prompt) and type: 
   ```sh
   >> echo %cd%
   ```
   
-  * On Mac open  Applications -> Utilities -> Terminal and type
+  * Mac/Linux: open a terminal (Mac: Applications -> Utilities -> Terminal) and type:
   ```sh
   >> pwd
   ```
-  
-  ```sh
-  You already know
-  ``` Linux
-
-2. Open the console interface on Bitcoin Core
+3. Navi
 
 
