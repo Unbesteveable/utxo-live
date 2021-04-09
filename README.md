@@ -63,7 +63,10 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
   ```sh
   getblockcount
   ```
-  and hitting enter.
+  and hitting enter. You should see this with a different block count:
+  
+<img src="https://utxo.live/getblockcount.png">
+  
 
 8. Dump the current utxo set by typing in the console window:
 
@@ -71,6 +74,8 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
   dumptxoutset <PATH to utxo-live>/<xxxxxx.dat>
   ```
   where `<PATH to utxo-live>` is copy-pasted from Step 5, and `<xxxxxx.dat>` is the block height. For example if the block height was 678505, the command will look something like:
+
+<img src="https://utxo.live/dump_output.png">
 
 ```sh
   dumptxoutset /Users/Steve/Documents/bitcoin-tools/utxo-live/678505.dat
@@ -89,8 +94,10 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 
    Note: you might already have these installed, but running the command won't hurt anything
 
-10. If 5-10 minutes have passed, check that the utxo dump is completed. Do this in two ways:
+10. If ten minutes have passed, check that the utxo dump is completed. Do this in two ways:
 
    * Check that the file no longer has `.incomplete` after `xxxxxx.dat` 
    * Check that the Bitcoin Core console displays the results of the dump as something like:
+
+11. 
 
