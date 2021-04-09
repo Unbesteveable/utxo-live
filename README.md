@@ -1,7 +1,17 @@
 <!-- ABOUT THE PROJECT -->
 ## UTXO-LIVE
 
+<br>
+
 This python script generates a heatmap visualization of the blockchain stored on your local Bitcoin node. 
+
+<br>
+
+<img src="https://utxo.live/utxo_heatmap_678336.png" alt="Logo" >
+
+
+<br>
+
 
 ## Overview
 
