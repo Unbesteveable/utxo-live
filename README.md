@@ -101,7 +101,7 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
   python3 utxo-live.py
   ```
 
-12. The program will take 20-30 minutes to complete and it will update you on the progress. If there are multiple xxxxxxx.dat files in the folder, it will ask you which one you'd like to process. The image should open automatically when finished. Otherwise it will be stored in the folder as `utxo_heatmap_xxxxxx.png'.
+12. The program will take 20-30 minutes to complete and it will update you on the progress. If there are multiple xxxxxxx.dat files in the folder, it will ask you which one you'd like to process. The image should open automatically when finished. It is also stored in the folder as `utxo_heatmap_xxxxxx.png'.
 
 ## Acknowledgements
 
