@@ -50,8 +50,9 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
   ```sh
   cd bitcoin-tools/utxo-live/
   ```
+  Note: Windows sometimes requires forward slashes `/` instead of back slashes `\`.
   
-5. Again display the full folder path (Step 3) and copy the path to your clipboard. We will be pasting it into Bitcoin Core soon.
+5. Again display the full folder path (Step 3) and copy the path to your clipboard. We will be pasting this path into Bitcoin Core soon.
 
 6. Leave the terminal window there, and open the Bitcoin Core console window. (Alternatively for bitcoin-cli users, open another terminal window and type the console commands in the next steps as `bitcoin-cli` commands.)
 
