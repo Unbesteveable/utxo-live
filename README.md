@@ -63,10 +63,7 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
   ```sh
   getblockcount
   ```
-  and hitting enter. You should see this with a different block count:
-  
-<img src="https://utxo.live/getblockcount.png">
-  
+  and hitting enter.
 
 8. Dump the current utxo set by typing in the console window:
 
@@ -74,8 +71,6 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
   dumptxoutset <PATH to utxo-live>/<xxxxxx.dat>
   ```
   where `<PATH to utxo-live>` is copy-pasted from Step 5, and `<xxxxxx.dat>` is the block height. For example if the block height was 678505, the command will look something like:
-
-<img src="https://utxo.live/dump_output.png">
 
 ```sh
   dumptxoutset /Users/Steve/Documents/bitcoin-tools/utxo-live/678505.dat
@@ -87,7 +82,6 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
  * Right click on `utxo-live.py`, chose "save as" and select the `utxo-live` folder.
 
  * In the terminal window (not the Bitcoin console), type the following command to install two python dependencies:
- * 
 ```sh
   python3 -m pip install numpy matplotlib
   ```
@@ -98,6 +92,8 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 
    * Check that the file no longer has `.incomplete` after `xxxxxx.dat` 
    * Check that the Bitcoin Core console displays the results of the dump as something like:
+
+<img src="https://utxo.live/dump_output.png">
 
 11. 
 
