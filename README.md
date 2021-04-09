@@ -93,7 +93,7 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
    * Check that the file no longer has `.incomplete` after `xxxxxx.dat` 
    * Check that the Bitcoin Core console displays the results of the dump as something like:
 
-<img src="https://utxo.live/dump_output.png">
+<img src="https://utxo.live/dump_output.png" border="2px solid black">
 
 11. 
 
