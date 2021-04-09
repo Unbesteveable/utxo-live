@@ -3,7 +3,7 @@
 
 <br>
 
-This python script generates a heatmap visualization of the blockchain stored on your local Bitcoin node. 
+This project generates a heatmap visualization of the blockchain stored on your local Bitcoin node. 
 
 <br>
 
@@ -15,7 +15,7 @@ This python script generates a heatmap visualization of the blockchain stored on
 
 ## Overview
 
-Every Bitcoin node accounts for all coins at all times by actively managing its UTXO (Unspent Transaction Output) database.  This project renders a heatmap of the UTXO database that shows all coins in a single image (as seen on <a href=https://utxo.live/>utxo.live</a>). The heatmap is a two dimensional histogram arranged by the date and BTC amount of each output.
+Every Bitcoin node accounts for all coins at all times by actively managing its UTXO (Unspent Transaction Output) database.  The python script above renders a heatmap of the UTXO database that shows all coins in a single image (as seen on <a href=https://utxo.live/>utxo.live</a>). The heatmap is a two dimensional histogram arranged by the date and BTC amount of each output.
 
 <!-- Requirements -->
 ## Requirements
