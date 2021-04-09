@@ -45,10 +45,10 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
   pwd
   ```
   
-4. Navigate to the `utxo-live` folder using the change directory `cd` command. For example if you're currently in `Documents` and you've created the folder  `Documents/bitcoin-tools/utxo-live/` then type: 
+4. Navigate to the `utxo-live` folder using the change directory `cd` command. For example if you're currently in `Users/Steve/` (or on Windows `C:\Users\Steve\`) and you've created the folder  `Steve/Documents/bitcoin-tools/utxo-live/` then type: 
 
   ```sh
-  cd bitcoin-tools/utxo-live/
+  cd Document/bitcoin-tools/utxo-live/
   ```
   Note: Windows sometimes requires forward slashes `/` instead of back slashes `\`.
   
