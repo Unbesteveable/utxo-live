@@ -24,7 +24,7 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 
 
 ## Instructions for experienced users
-* Create a folder `utxo-live` in a familiar location
+* Create a folder called `utxo-live` in a familiar location
 * Dump the utxo set `bitcoin-cli dumptxoutset <path to utxo-live>/xxxxxx.dat` where xxxxxxx is the block height (5 min) 
 * Download `utxo-live.py` to the same folder and run it `python3 utxo-live.py` (20 min)
 
