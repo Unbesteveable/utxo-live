@@ -30,7 +30,7 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 * Download <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a> to the same folder and run it `python3 utxo-live.py` (20 min)
 
 ## Step by step instructions
-1. Make sure Bitcoin Core is running and synchronized.
+1. Make sure Bitcoin Core (version 0.20 or higher) is running and synchronized.
 
 2. Create a new folder called `utxo-live` in a familiar location on your machine (e.g. in your Documents folder).
 
