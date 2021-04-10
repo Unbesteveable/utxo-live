@@ -7,7 +7,7 @@ This project generates a heatmap visualization of the Bitcoin blockchain stored 
 
 <br>
 
-<img src="https://utxo.live/utxo_heatmap_68336.png" alt="Logo" >
+<img src="https://utxo.live/utxo_heatmap_678336.png" alt="Logo" >
 
 
 <br>
