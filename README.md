@@ -8,7 +8,7 @@ This project generates a heatmap visualization of the Bitcoin blockchain stored 
 <br>
 
 <img src="https://utxo.live/utxo_heatmap_678336.png" alt="Logo" >
-*Figure description: The heatmap is a two dimensional histogram showing the output date (x-axis), BTC amount (y-axis), and number of unspent outputs (color map) in each histogram bin. The bin size of output dates is one day. The BTC amounts on the y-axis are log scale and there are 100 bins in each log decade (e.g. 100 bins between 1 and 10 BTC).*
+<em>Figure description: The heatmap is a two dimensional histogram showing the output date (x-axis), BTC amount (y-axis), and number of unspent outputs (color map) in each histogram bin. The bin size of output dates is one day. The BTC amounts on the y-axis are log scale and there are 100 bins in each log decade (e.g. 100 bins between 1 and 10 BTC).</em>
 
 
 ## Project Overview
