@@ -18,7 +18,7 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
 <!-- Requirements -->
 ## Requirements
 * Bitcoin Core version 0.20 or higher
-* Python3 (ships with operating systems)
+* Python3 (comes standard on all operating systems)
 
 
 ## Instructions for experienced users
