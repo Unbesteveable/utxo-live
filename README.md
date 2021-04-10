@@ -38,7 +38,7 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
 
 2. Create a new folder called `utxo-live` in a familiar location on your machine (e.g. in your Documents folder).
 
-3. Open a terminal window and display the current folder path.
+3. Open a terminal window and display the current folder path. Do this by:
 
   * Windows: open a terminal (Start -> Command Prompt) and type: 
   ```sh
@@ -57,13 +57,13 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
   ```
   Note: Windows sometimes requires forward slashes `/` instead of back slashes `\`.
   
-5. Again display the full folder path (Step 3) and copy the path to your clipboard. We will be pasting this path into Bitcoin Core soon.
+5. Again display the current folder (Step 3) and copy to your clipboard the full path to the `utxo-live` folder. We will be pasting this path into Bitcoin Core soon.
 
 6. Leave the terminal window momentarily, and open the Bitcoin Core console window. (Alternatively for bitcoin-cli users, open another terminal window and type the console commands in the next steps as `bitcoin-cli` commands.)
 
 <img src="https://miro.medium.com/max/1098/1*DEukIfd6csdA6bbl2K5sSg.jpeg" alt="Open Console Pic" >
 
-7. Get the current block height by typing in the console window:
+7. Get the current block count by typing in the console window:
 
   ```sh
   getblockcount
@@ -75,14 +75,14 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
 ```sh
   dumptxoutset <PATH to utxo-live>/<xxxxxx.dat>
   ```
-  where `<PATH to utxo-live>` is copy-pasted from Step 5, and `<xxxxxx.dat>` is the block height. For example if the block height was 678505, the command will look something like:
+  where `<PATH to utxo-live>` is copy-pasted from Step 5, and `<xxxxxx.dat>` is the block count. For example if the block count is 678505, the command (for my path) is:
 
 ```sh
   dumptxoutset /Users/Steve/Documents/bitcoin-tools/utxo-live/678505.dat
   ```
-  Hit enter. If there are no error messages then it's working. It will take 5-10 minutes. Look in your `utxo-live` folder and you should see the file being created as `xxxxxx.dat.incomplete`
+  If there are no error messages after hitting enter, then it's working. It will take 5-10 minutes. Look in your `utxo-live` folder and you should see the file being created as `xxxxxx.dat.incomplete`.
 
-9. While the utxo file is dumping, download `utxo-live.py` and install two python dependencies.
+9. While the utxo file is dumping, download `utxo-live.py` and install two python dependencies. To do this:
  
  * Right click on <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a>, choose "save as" and select the `utxo-live` folder.
 
