@@ -7,7 +7,7 @@ A new feature in Bitcoin Core 0.20 allows users to dump the state of the blockch
 <br>
 
 <img src="https://utxo.live/utxo_heatmap_678336.png" alt="Logo" >
-<em>Figure description: The heatmap is a two dimensional histogram showing the output date (x-axis), BTC amount (y-axis), and number of unspent outputs (color map) in each histogram bin. The bin size of output dates is one day. The BTC amounts on the y-axis are log scale and there are 100 bins in each log decade (e.g. 100 bins between 1 and 10 BTC). A continuosly updating version of this image is running at <a href=https://utxo.live/>utxo.live</a>.</em>
+<em>Figure description: The heatmap is a two dimensional histogram showing the output date (x-axis), BTC amount (y-axis), and number of unspent outputs (color map) in each histogram bin. The BTC amounts on the y-axis are log scale and there are 100 bins in each log decade (e.g. 100 bins between 1 and 10 BTC). The bin size of output dates is one day. A daily updating version of this image is running at <a href=https://utxo.live/>utxo.live</a>.</em>
 
 
 ## Privacy & Security
