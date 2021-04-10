@@ -3,7 +3,7 @@
 
 <br>
 
-This project generates a heatmap visualization of the Bitcoin blockchain stored on your local node. It is a local version of the online heatmap at <a href=https://utxo.live/>utxo.live</a> 
+This project generates a heatmap visualization of the Bitcoin blockchain stored on your local node. It is a local version of the visualization at <a href=https://utxo.live/>utxo.live</a>.
 
 <br>
 
