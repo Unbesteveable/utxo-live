@@ -395,7 +395,7 @@ ax.set_xticklabels(label_x, rotation=0, fontsize=6)
 
 #title and labels
 tick_color = "white"
-fig_title = "   Bitcoin Core UTXO dump file: "+utxo_fn[2:]
+fig_title = "    The Bitcoin blockchain at block#"+utxo_fn[2:-4]
 tobj = plt.title(fig_title, fontsize=12, loc='left')
 plt.setp(tobj, color=tick_color)
 ax.set_ylabel('Amount (BTC)', fontsize=8)
