@@ -15,7 +15,7 @@ This project generates a heatmap visualization of the Bitcoin blockchain stored 
 
 ## Overview
 
-A new feature in Bitcoin Core 0.20 allows users to dump the chain state using the command `dumptxoutset`. The database cointaining the chain state is called the UTXO set (Unspent Transaction Outputs). This github project takes the ouput of `dumptxoutset` and generates a heatmap of the UTXO set. Thus all of the bitcoin in the blockchain is visualized in a single image.
+A new feature in Bitcoin Core 0.20 allows users to dump the chain state using the command `dumptxoutset`. The database cointaining the chain state is called the UTXO set (Unspent Transaction Outputs). The python script <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a> takes the ouput of `dumptxoutset` and generates a heatmap of the UTXO set. Thus all of the bitcoin in the blockchain is visualized in a single image.
 
 ## Security
 
@@ -24,7 +24,7 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
 <!-- Requirements -->
 ## Requirements
 * Bitcoin Core version 0.20 or higher
-* Python3 (you already have it)
+* Python3 (ships with operating systems)
 
 
 ## Instructions for experienced users
