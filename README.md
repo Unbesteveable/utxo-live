@@ -79,7 +79,7 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 
 9. While the utxo file is dumping, download `utxo-live.py` and install two python dependencies.
  
- * Right click on `utxo-live.py`, chose "save as" and select the `utxo-live` folder.
+ * Right click on `utxo-live.py`, choose "save as" and select the `utxo-live` folder.
 
  * In the terminal window (not the Bitcoin console), type the following command to install two python dependencies:
 ```sh
@@ -101,7 +101,5 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
   python3 utxo-live.py
   ```
 
-12. The program will take 20-30 minutes to complete and it will update you on the progress. If there are multiple xxxxxxx.dat files in the folder, it will ask you which one you'd like to process. The image should open automatically when finished. It is also stored in the folder as `utxo_heatmap_xxxxxx.png'.
-
-## Acknowledgements
+12. The program will take 20-30 minutes to complete and it will update you on the progress. If there are multiple xxxxxxx.dat files in the folder, it will ask you which one you'd like to process. The image should open automatically when finished. It is also stored in the folder as `utxo_heatmap_xxxxxx.png`.
 
