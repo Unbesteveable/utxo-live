@@ -15,7 +15,7 @@ This project generates a heatmap visualization of the Bitcoin blockchain stored 
 
 ## Overview
 
-Every Bitcoin node accounts for all coins at all times by actively managing its UTXO (Unspent Transaction Output) database.  The python script above renders a heatmap of the UTXO database that shows all coins in a single image (as seen on <a href=https://utxo.live/>utxo.live</a>). The heatmap is a two dimensional histogram arranged by the date and BTC amount of each output.
+Every Bitcoin node accounts for all coins at all times by actively managing its UTXO (Unspent Transaction Output) database.  The python script <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a> renders a heatmap of the UTXO database that shows all coins in a single image (as seen on <a href=https://utxo.live/>utxo.live</a>). The heatmap is a two dimensional histogram arranged by the date and BTC amount of each output.
 
 <!-- Requirements -->
 ## Requirements
@@ -25,8 +25,9 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 
 ## Instructions for experienced users
 * Create a folder called `utxo-live` in a familiar location
-* Dump the utxo set `bitcoin-cli dumptxoutset <path to utxo-live>/xxxxxx.dat` where xxxxxxx is the block height (5 min) 
-* Download `utxo-live.py` to the same folder and run it `python3 utxo-live.py` (20 min)
+* Dump the utxo set `bitcoin-cli dumptxoutset <path to utxo-live>/xxxxxx.dat` where xxxxxxx is the block height (5 min)
+* Install two python dependencies `python3 -m pip install numpy matplotlib` 
+* Download <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a> to the same folder and run it `python3 utxo-live.py` (20 min)
 
 ## Step by step instructions
 1. Make sure Bitcoin Core is running and synchronized.
@@ -79,7 +80,7 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 
 9. While the utxo file is dumping, download `utxo-live.py` and install two python dependencies.
  
- * Right click on `utxo-live.py`, choose "save as" and select the `utxo-live` folder.
+ * Right click on <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a>, choose "save as" and select the `utxo-live` folder.
 
  * In the terminal window (not the Bitcoin console), type the following command to install two python dependencies:
 ```sh
@@ -95,7 +96,7 @@ Every Bitcoin node accounts for all coins at all times by actively managing its 
 
 <img src="https://utxo.live/dump_output.png">
 
-11. If the dump file is finished and Step 9 is completed (`utxo-live.py` is downloaded and python dependencies were installed), then run `utxo-live.py` by typing in the terminal:
+11. If the dump file is finished and Step 9 is completed (<a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a> is downloaded and python dependencies were installed), then run <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a> by typing in the terminal:
 
 ```sh
   python3 utxo-live.py
