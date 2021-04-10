@@ -69,7 +69,10 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
   ```sh
   getblockcount
   ```
-  and hitting enter.
+  and hitting enter. The output will look like:
+
+<img src="https://utxo.live/getblockcount.png">
+ 
 
 8. Dump the current utxo set by typing in the console window:
 
