@@ -81,7 +81,7 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
 
 9. While the utxo file is dumping, download `utxo-live.py` and install two python dependencies. To do this:
  
- * Right click on <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a>, choose "save as" and select the `utxo-live` folder.
+ * Right click on <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a>, choose "Save Link As" and select the `utxo-live` folder.
 
  * In the terminal window (not the Bitcoin console), type the following command to install two python dependencies:
 ```sh
