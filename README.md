@@ -6,7 +6,7 @@ A new feature in Bitcoin Core 0.20 allows users to dump the state of the blockch
  
 <br>
 
-<img src="https://utxo.live/utxo_heatmap_678336.png" alt="Logo" >
+<img src="https://utxo.live/heatmap_for_github.png" alt="Logo" >
 <em>Figure description: The heatmap is a two dimensional histogram showing the output date (x-axis), BTC amount (y-axis), and number of unspent outputs (color map) in each histogram bin. The BTC amounts on the y-axis are log scale and there are 100 bins in each log decade (e.g. 100 bins between 1 and 10 BTC). The bin size of output dates is one day. A daily updating version of this image is running at <a href=https://utxo.live/>utxo.live</a>.</em>
 
 
@@ -95,7 +95,7 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
    * Check that the file no longer has `.incomplete` after `xxxxxx.dat` 
    * Check that the Bitcoin Core console displays the results of the dump as something like:
 
-<img src="https://utxo.live/dump_output.png">
+<img src="https://utxo.live/dump_output2.png">
 
 11. If the dump file is finished and Step 9 is completed (<a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a> is downloaded and python dependencies were installed), then run <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a> by typing in the terminal:
 
