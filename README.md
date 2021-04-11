@@ -108,4 +108,4 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
 
 ## Acknowledgements
 
-The python functions that parse and decode the utxo dump file were adapted from <a href='https://github.com/sr-gi/bitcoin_tools'>Bitcoin_Tools<\a>. I learned how Core serializes utxos from <a href='https://github.com/in3rsha/bitcoin-utxo-dump'> Bitcoin-UTXO-Dump <\a>. An inspiring project that visualizes changes in the UTXO set as a movie is <a href='https://github.com/martinus/BitcoinUtxoVisualizer'> 'BitcoinUtxoVisualizer <\a>.
+The python functions that parse and decode the utxo dump file were adapted from <a href='https://github.com/sr-gi/bitcoin_tools'>Bitcoin_Tools<a>. I learned how Core serializes utxos from <a href='https://github.com/in3rsha/bitcoin-utxo-dump'> Bitcoin-UTXO-Dump <a>. An inspiring project that visualizes changes in the UTXO set as a movie is <a href='https://github.com/martinus/BitcoinUtxoVisualizer'> 'BitcoinUtxoVisualizer <a>.
