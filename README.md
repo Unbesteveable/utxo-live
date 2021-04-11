@@ -88,7 +88,7 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
   python3 -m pip install numpy matplotlib
   ```
 
-   Note: you might already have these installed, but running the command won't hurt anything
+   Note: you might already have these installed, but running the command won't hurt anything.
 
 10. If ten minutes have passed, check that the utxo dump is completed. Do this in two ways:
 
@@ -103,5 +103,4 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
   python3 utxo-live.py
   ```
 
-12. The program will take 20-30 minutes to complete and it will update you on the progress. If there are multiple xxxxxxx.dat files in the folder, it will ask you which one you'd like to process. The image should open automatically when finished. It is also stored in the folder as `utxo_heatmap_xxxxxx.png`.
-
+12. The program will take 20-30 minutes to complete and it will update you on the progress. If there are multiple xxxxxxx.dat files in the folder, it will ask you which one you'd like to process. When finished the image is stored in the folder as `utxo_heatmap_xxxxxx.png`.
