@@ -214,8 +214,9 @@ def get_filename():
     dat_files = [f for f in filenames if '.dat' in f]
     
     #check for zero dat files
-    if dat_files is None:
-        print('\nError, no utxo.dat files found in this directory. Make sure the utxo dump file from core is in this directory')
+    if not dat_files:
+        print('\nError, no utxo.dat files found in this directory. \
+Make sure the utxo dump file from core is in this directory')
         sys.exit()
     
     #if only one dat file, then use that one, o.w. ask which
