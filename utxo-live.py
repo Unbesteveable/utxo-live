@@ -16,6 +16,7 @@ import matplotlib.cm as cm
 import numpy as np
 import sys
 import time
+import copy
 import struct
 import subprocess
 from os import walk
@@ -357,8 +358,8 @@ plt.clf()
 fig = plt.figure(figsize=(8, 6), facecolor='black')
 ax = fig.add_axes([.11,.37,.8,.55])
 
-#color maps for pcolor  
-my_cmap = cm.gnuplot2
+#color maps for pcolor
+my_cmap = copy.copy(cm.gnuplot2)
 my_cmap.set_bad(color='black')
 
 # render scatter
@@ -395,7 +396,7 @@ ax.set_xticklabels(label_x, rotation=0, fontsize=6)
 
 #title and labels
 tick_color = "white"
-fig_title = "    The Bitcoin blockchain at block#"+utxo_fn[2:-4]
+fig_title = "  The Bitcoin Blockchain (from file "+utxo_fn[2:]+")"
 tobj = plt.title(fig_title, fontsize=12, loc='left')
 plt.setp(tobj, color=tick_color)
 ax.set_ylabel('Amount (BTC)', fontsize=8)
