@@ -24,25 +24,25 @@ from os import walk
 
 #UTXO class
 class UTXO:
-    
+
     def __init__(self, h, a):
         self.height = h
         self.amount = a
-    
-    
+
+
 
 #decode the binary best block hash (256 bit = 32 bytes)
 def decode_hex256(bbhash_b):
 
-    #make sure byte length is 32    
+    #make sure byte length is 32
     assert(len(bbhash_b)==32)
 
-    # call in as 8 uints then convert to 1 hex string   
+    # call in as 8 uints then convert to 1 hex string
     bbhash = ''
     a = struct.unpack('>8I', bbhash_b[::-1])
     for ai in a:
         bbhash += '{0:08x}'.format(ai)
-        
+
     return bbhash
 
 
@@ -95,12 +95,12 @@ def txout_decompress(x):
 
 #parse the script portion of the utxo
 def parse_script(data_b, data_size, first_byte):
-    
+
     data = data_b.hex()
     if first_byte:
         data = first_byte+data
     return data
-        
+
     #to decompress script in future look at
     #modified from https://github.com/sr-gi/bitcoin_tools/blob/0f6ea45b6368200e481982982822f0416e0c438d/bitcoin_tools/analysis/status/utils.py#L259
 
@@ -111,113 +111,113 @@ def read_fileheader(fin):
     bbhash_b = fin.read(32)
     ccount_b = fin.read(8)
     txcount_b = fin.read(4)
-    
+
     #decode binary bbhash, ccount
     bbhash = decode_hex256(bbhash_b)
     ccount = struct.unpack('Q', ccount_b)[0]
     txcount = struct.unpack('I', txcount_b)[0]
-        
+
     return ccount
 
 
 #read a single UTXO
 def get_UTXO(fin):
-    
+
     ### Read in bytes of utxo
-    
+
     #read in txid, outnum
     txid_b = fin.read(32)
     outnum_b = fin.read(4)
-    
+
     #read the binary stream until stop given by Varint
     code = parse_b128(fin)
-    
+
     #next varint is the utxo amount
     amount_v = parse_b128(fin)
-    
+
     #next varint is the script type
     out_type_v = parse_b128(fin)
-    
+
     #script type must be decoded now because it has variable length
     out_type = b128_decode(out_type_v)
-    
+
     #get data size based on script type
     NSPECIALSCRIPTS = 6
     first_byte = None
     if out_type in [0, 1]:
         data_size = 20  # 20 bytes
     elif out_type in [2, 3, 4, 5]:
-        data_size = 32  
+        data_size = 32
         first_byte = out_type_v[-1] # need previous byte from stream
     else:
         data_size = (out_type - NSPECIALSCRIPTS) * 1
-    
+
     #parse script
     script_b = fin.read(data_size)
-    
-    
+
+
 
     # ### decode txid, outnum, heigh, coinbase and btc amount
-    
+
     #decode txid, outnum
     #txid = decode_hex256(txid_b)
     #outnum = struct.unpack('I', outnum_b)[0]
-        
+
     # #decode the varint to get coinbase and height
     code = b128_decode(code)
     height = code >> 1
     #coinbase = code & 0x01
-    
+
     # #decode btc amount of utxo
     amount = txout_decompress(b128_decode(amount_v))
-    
+
     utxo = UTXO(height,amount)
-    
+
     return utxo
-    
+
     #decode script
-    #script = parse_script(script_b, data_size, first_byte)    
+    #script = parse_script(script_b, data_size, first_byte)
 
 
 #read a batch of utxos
 def get_UTXOs(fin, batch_size):
-    
+
     #read in batch of utxos
     utxos = []
     for u in range(batch_size):
-        utxos.append(get_UTXO(fin))   
-    
+        utxos.append(get_UTXO(fin))
+
     return utxos
 
 #generate histogram of a batch of utxos
 def get_Histogram(utxos, xedges, yedges):
-    
+
     #place batch into histogram
     x = [utxo.height for utxo in utxos]
     y = [utxo.amount for utxo in utxos]
     x = np.array(x)
     y = np.array(y)*1e-8
-    
+
     #take log of amounts
     y[np.where(y==0)]=1e-9
     y = np.log10(y)
-    
+
     tmp_hist, xedges, yedges = np.histogram2d(x, y, (xedges, yedges))
     return tmp_hist, xedges, yedges
 
 
 #ask user to select file name if multiple
 def get_filename():
-    
+
     #get file list of directory
     _, _, filenames = next(walk('.'))
     dat_files = [f for f in filenames if '.dat' in f]
-    
+
     #check for zero dat files
     if dat_files is None:
         print('\nError, no utxo.dat files found in this directory. Make sure the utxo dump file from core is in this directory')
         sys.exit()
-    
+
     #if only one dat file, then use that one, o.w. ask which
     utxo_fn = './'+dat_files[0]
     if len(dat_files)>1:
@@ -230,12 +230,12 @@ def get_filename():
         except:
             print('\nError, could not open file. Type the right number?')
             sys.exit()
-    
+
     #check for incomplete
     if 'incomplete' in utxo_fn:
         print('\nError, core has not finished dumping the file')
         sys.exit()
-    
+
     #get block height from file name
     block_height = 0
     try:
@@ -243,16 +243,16 @@ def get_filename():
     except:
         print('\nError: the file name is not a valid block height')
         sys.exit()
-    
+
     #check reasonable block+heights
     if block_height < 600000 or block_height > 6000000:  #100 years from now
         print('\nError: the file name is not a valid block height')
         sys.exit()
-        
+
     return utxo_fn, block_height
 
 # %%
-    
+
 def openImage(path):
     imageViewerFromCommandLine = {'linux':'xdg-open',
                                   'win32':'explorer',
@@ -264,7 +264,7 @@ def openImage(path):
 
 ###  MAIN #####
 
-start_time = time.time()    
+start_time = time.time()
 
 
 utxo_fn, block_height = get_filename()
@@ -306,19 +306,19 @@ batch_size = coin_count // 100
 #start processing batches of coins
 coins_processed = 0
 while coins_processed < coin_count:
-    
+
     #check for the size of the final batch call
     coins_remaining = coin_count-coins_processed
     if coins_remaining < batch_size:
         batch_size = coins_remaining
-    
+
     #get batch of utxos
     utxos = get_UTXOs(fin, batch_size)
-    
+
     #get histogram
     tmp_hist,xedges,yedges = get_Histogram(utxos, xedges, yedges)
     hist += tmp_hist
-    
+
     #update user on status
     coins_processed += batch_size
     perc_done = (100*coins_processed) // coin_count
@@ -369,7 +369,7 @@ im = ax.pcolormesh(phist, vmin=-1, vmax=np.floor(hmax*.6), cmap=my_cmap, label='
 plt.yticks(np.linspace(0, yres, num=14))
 labels = ["100k","10k","1k",'100','10',
               "1",".1",'.01','.001','10k sat',
-              "1k sat","100 sat",'10 sat','0 sat',] 
+              "1k sat","100 sat",'10 sat','0 sat',]
 labels.reverse()
 ax.set_yticklabels(labels, fontsize=8)
 ax.yaxis.set_ticks_position('both')
@@ -389,7 +389,7 @@ for n in range(len(ticks_height)):
     th = ticks_height[n]
     ticks_x.append(np.argmin(np.abs(np.array(xedges)-th)))
     label_x.append(ticks_year[n]+"\n"+str(th))
-    
+
 plt.xticks(ticks_x)
 ax.set_xticklabels(label_x, rotation=0, fontsize=6)
 
@@ -412,13 +412,13 @@ ax.set_xlabel("Output time (year, block height)", fontsize=8)
 
 
 #  Color bar
-cbaxes = fig.add_axes([0.75, .925, 0.2, 0.015]) 
+cbaxes = fig.add_axes([0.75, .925, 0.2, 0.015])
 cb = plt.colorbar(im, orientation="horizontal", cax=cbaxes)
 cbaxes.set_xlim(-0.01,np.floor(hmax*.8)+.1)
 cbaxes.xaxis.set_ticks_position('top')
 cbticks = np.arange(int(np.floor(hmax*.6))+1)
 cb.set_ticks(cbticks)
-clabels = ['1','10','100','1k','10k','100k','1M'] 
+clabels = ['1','10','100','1k','10k','100k','1M']
 cbaxes.set_xticklabels(clabels[0:len(cbticks)], fontsize=6)
 cbaxes.set_ylabel("Number of \nunspent outputs", rotation=0, fontsize=6)
 cbaxes.yaxis.set_label_coords(-.25,0)
@@ -443,7 +443,7 @@ except:
 
 
 # %%
-    
-    
+
+
 #print("\nrun time: ", time.time() - start_time)
 
