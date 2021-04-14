@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-A new feature in Bitcoin Core 0.20 allows users to dump the state of the blockchain (the UTXO set) using the command `dumptxoutset`. I've written a python script <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a> that takes the ouput of `dumptxoutset` and generates a heatmap of the blockchain via the UTXO set. Thus all of the active bitcoin in the blockchain is visualized in a single image from your own node. 
+A new feature in Bitcoin Core 0.20 allows users to dump the state of the blockchain (the UTXO set) using the command `dumptxoutset`. I've written a python script <a href='https://github.com/Unbesteveable/utxo-live/raw/main/utxo-live.py'>utxo-live.py<a> that takes the ouput of `dumptxoutset` and generates a heatmap of the blockchain via the UTXO set. Thus all of the active bitcoin in the blockchain is visualized in a single image from your own node. 
  
 <br>
 
@@ -24,8 +24,9 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
 ## Instructions for experienced users
 * Create a folder called `utxo-live` in a familiar location
 * Dump the utxo set `bitcoin-cli dumptxoutset <path to utxo-live>/xxxxxx.dat` where xxxxxxx is the current block height (5 min)
+   (Note: `bitcoin-cli` doesn't ship with Core on Mac OS, use Window->Console instead)
 * Install two python dependencies `python3 -m pip install numpy matplotlib` 
-* Download <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a> to your `utxo-live` folder and run it `python3 utxo-live.py` (20 min)
+* Download <a href='https://github.com/Unbesteveable/utxo-live/raw/main/utxo-live.py'>utxo-live.py<a> to your `utxo-live` folder and run it `python3 utxo-live.py` (20 min)
 
 ## Step by step instructions
 1. Make sure Bitcoin Core (version 0.20 or higher) is running and synchronized.
@@ -81,7 +82,7 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
 
 9. While the utxo file is dumping, download `utxo-live.py` and install two python dependencies. To do this:
  
- * Right click on <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a>, choose "Save Link As" and select the `utxo-live` folder.
+ * Right click on <a href='https://github.com/Unbesteveable/utxo-live/raw/main/utxo-live.py'>utxo-live.py<a>, choose "Save Link As" and select the `utxo-live` folder.
 
  * In the terminal window (not the Bitcoin console), type the following command to install two python dependencies:
 ```sh
@@ -97,7 +98,7 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
 
 <img src="https://utxo.live/dump_output2.png">
 
-11. If the dump file is finished and Step 9 is completed (<a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a> is downloaded and python dependencies were installed), then run <a href='https://github.com/Unbesteveable/utxo-live/blob/main/utxo-live.py'>utxo-live.py<a> by typing in the terminal:
+11. If the dump file is finished and Step 9 is completed (<a href='https://github.com/Unbesteveable/utxo-live/raw/main/utxo-live.py'>utxo-live.py<a> is downloaded and python dependencies were installed), then run <a href='https://github.com/Unbesteveable/utxo-live/raw/main/utxo-live.py'>utxo-live.py<a> by typing in the terminal:
 
 ```sh
   python3 utxo-live.py
