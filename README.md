@@ -23,7 +23,7 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
 
 ## Instructions for experienced users
 * Create a folder called `utxo-live` in a familiar location
-* Dump the utxo set `bitcoin-cli dumptxoutset <path to utxo-live>/xxxxxx.dat` where xxxxxxx is the current block height (5 min)
+* Dump the utxo set `bitcoin-cli dumptxoutset <path to utxo-live>/xxxxxx.dat` where xxxxxxx is the current block height (10-20 min)
    (Note: `bitcoin-cli` doesn't ship with Core on Mac OS, use Window->Console instead)
 * Install two python dependencies `python3 -m pip install numpy matplotlib` 
 * Download <a href='https://github.com/Unbesteveable/utxo-live/raw/main/utxo-live.py'>utxo-live.py<a> to your `utxo-live` folder and run it `python3 utxo-live.py` (20 min)
@@ -78,7 +78,7 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
 ```sh
   dumptxoutset /Users/Steve/Documents/bitcoin-tools/utxo-live/678505.dat
   ```
-  If there are no error messages after hitting enter, then it's working. It will take 5-10 minutes. Look in your `utxo-live` folder and you should see the file being created as `xxxxxx.dat.incomplete`.
+  If there are no error messages after hitting enter, then it's working. It will take 10-20 minutes. Look in your `utxo-live` folder and you should see the file being created as `xxxxxx.dat.incomplete`.
 
 9. While the utxo file is dumping, download `utxo-live.py` and install two python dependencies. To do this:
  
@@ -91,7 +91,7 @@ With the new `dumptxouset` command, the python script no longer requires an RPC 
 
    Note: you might already have these installed, but running the command won't hurt anything.
 
-10. If ten minutes have passed, check that the utxo dump is completed. Do this in two ways:
+10. If 10-20 minutes have passed, check that the utxo dump is completed. Do this in two ways:
 
    * Check that the file no longer has `.incomplete` after `xxxxxx.dat` 
    * Check that the Bitcoin Core console displays the results of the dump as something like:
