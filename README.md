@@ -1,5 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 
+Update for Core version v22.0.0: There appears to be a bug when reading the dumptxoutset file from Core version v22.0.0. Previous version of Core work fine.
+
 ## Project Overview
 
 A new feature in Bitcoin Core 0.20 allows users to dump the state of the blockchain (the UTXO set) using the command `dumptxoutset`. I've written a python script <a href='https://github.com/Unbesteveable/utxo-live/raw/main/utxo-live.py'>utxo-live.py<a> that takes the ouput of `dumptxoutset` and generates a heatmap of the blockchain via the UTXO set. Thus all of the active bitcoin in the blockchain is visualized in a single image from your own node. 
